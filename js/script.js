@@ -36,7 +36,7 @@ map.fitBounds([[15.59, 49.40],[17.67,48.75]])
     //legenda
     var i;
     var colors = ['#de2d26', '#3182bd', '#bdbdbd'];
-    var layers = ['možný rozhoz jedu', 'zakázaný rozhoz jedu', 'nezjištěno'];
+    var layers = ['možný rozhoz jedu (při splnění dalších podmínek)', 'zakázaný rozhoz jedu', 'nezjištěno'];
 
     for (i = 0; i < layers.length; i++) {
         var layer = layers[i];
@@ -77,7 +77,7 @@ map.fitBounds([[15.59, 49.40],[17.67,48.75]])
           layers: ['hrabos']
         });
         if (dpb.length > 0) {
-            document.getElementById('pd').innerHTML = `Hospodář: ${dpb[0].properties.uziv}<br>Rozloha pozemku: ${dpb[0].properties.vymera_ha} ha<br>Plodina: ${dpb[0].properties.plodina}<br>Aktivní nory hraboše (ha): ${dpb[0].properties.aktivni_nory}<br>Aplikace jedu rozhozem: ${dpb[0].properties.prah_skodlivosti}`
+            document.getElementById('pd').innerHTML = `Hospodář: ${dpb[0].properties.uziv}<br>Rozloha pozemku: ${dpb[0].properties.vymera_ha} ha<br>Plodina: ${dpb[0].properties.plodina}<br>Aktivní nory hraboše (ha): ${dpb[0].properties.aktivni_nory}<br>Monžý rozhoz jedu (při splnění dalších podmínek): ${dpb[0].properties.prah_skodlivosti}`
           } else {
             document.getElementById('pd').innerHTML = '<p>Vyberte pozemek na mapě.</p>';
         }        
